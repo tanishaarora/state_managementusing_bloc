@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:state_managementusing_bloc/features/home/bloc_home_bloc.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -10,6 +12,13 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return BlocConsumer<HomeBloc, HomeState>(
+      listener: (context, state) {
+        // TODO: implement listener
+      },
+      builder: (context, state) {
+        return Scaffold();
+      },
+    );
   }
 }
